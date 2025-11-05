@@ -1,0 +1,28 @@
+#!/bin/bash
+
+PID_CIBLE=$(cat /tmp/.pid_a_tuer 2>/dev/null)
+CODE_ATTENDU=$(cat /tmp/.code_malware_temp 2>/dev/null)
+
+if kill -0 $PID_CIBLE 2>/dev/null
+then
+	echo "échec : le processus est toujours actif"
+	echo " vous devez d'abord neutraliser programme malveillant"
+	exit 1
+fi
+
+echo "Le processus est neutralisé. Veuillez entrer le code secret "
+
+read -p "Code SECRET : " CODE_JOUEUR
+
+echo "DEBUG: Code attendu=''$CODE_ATTENDU''"
+echo "DEBUG: Code joueur=''$CODE_JOUEUR''"
+
+
+if [ "$CODE_JOUEUR" != "$CODE_ATTENDU" ]
+then
+	echo "code incorrect"
+	exit 1
+fi
+
+echo "Félicitation ! Vous avez réussi a neutraliser le programme et a extraire le bon code."
+exit 0

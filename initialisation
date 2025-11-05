@@ -1,0 +1,20 @@
+#!/bin/bash
+
+killall malware_simule 2>/dev/null
+
+chmod +x ./malware_simule
+
+rm -f /tmp/service_activities.log
+rm -f /tmp/.malware_pid_cahce.log
+
+echo "Démarrage du processus mallveillant..."
+./malware_simule &
+
+echo ""
+echo "Un processus malveillant est actif"
+echo "Vous devez le neutraliser"
+echo "Etapes 1 & 2 : Localisation et identification"
+echo "Etape 3 : Neutralisation "
+echo "Etape 4 : Extraction du code "
+
+
