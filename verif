@@ -14,9 +14,6 @@ echo "Le processus est neutralisé. Veuillez entrer le code secret "
 
 read -p "Code SECRET : " CODE_JOUEUR
 
-echo "DEBUG: Code attendu=''$CODE_ATTENDU''"
-echo "DEBUG: Code joueur=''$CODE_JOUEUR''"
-
 
 if [ "$CODE_JOUEUR" != "$CODE_ATTENDU" ]
 then
