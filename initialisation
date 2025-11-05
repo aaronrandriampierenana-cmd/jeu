@@ -16,5 +16,6 @@ echo "Vous devez le neutraliser"
 echo "Etapes 1 & 2 : Localisation et identification"
 echo "Etape 3 : Neutralisation "
 echo "Etape 4 : Extraction du code "
+echo "Le code se trouve dans /tmp/log_malware.txt"
 
 
