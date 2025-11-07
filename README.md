@@ -25,4 +25,4 @@ Détails techniques :
     - Demande le code secret au joueur (read)
     - Compare le code de référence au code secret du joueur
 
-**/!\Bien penser à donner des permissions à initialisation et verif avant de commencer le jeu /!\**
+** /!\ Attntion ! Pensez bien à donner des permissions à initialisation et verif avant de commencer le jeu (chmod +x <fichier>) /!\ **
