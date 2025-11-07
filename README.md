@@ -13,22 +13,22 @@ Pour ce faire il a lancer un programme malveillant camouflé parmis vos fichiers
   2) Neutralisation : utilisation de kill
   3) Récuperation du mot de passe : utilisation de tail
 
-**Détails techniques :**
+**Fichiers principaux :**
   
-**initialisation :**
+  **initialisation :**
 
-- Nettoie les anciennes parties pour assurer la rejouabilité du jeu grâce (killall, rm)
-- Affiche les instructions du jeu (echo)
+    - Nettoie les anciennes parties pour assurer la rejouabilité du jeu grâce (killall, rm)
+    - Affiche les instructions du jeu (echo)
     
-**malware_simule :**
+  **malware_simule :**
 
-- Crée le fichier malveillant à l'aide d'une boucle infinie avec une pause (while true et sleep)
-- Génere un code aléatoire et l'écrit dans un fichier de référence et dans un log public ($RANDOM et /tmp/...)
+    - Crée le fichier malveillant à l'aide d'une boucle infinie avec une pause (while true et sleep)
+    - Génere un code aléatoire et l'écrit dans un fichier de référence et dans un log public ($RANDOM et /tmp/...)
 
-**verif :**
+  **verif :**
 
-- Vérifie que le PID cible est mort (kill -0)
-- Demande le code secret au joueur (read)
-- Compare le code de référence au code secret du joueur
+    - Vérifie que le PID cible est mort (kill -0)
+    - Demande le code secret au joueur (read)
+    - Compare le code de référence au code secret du joueur
 
 ***/!\ Attention ! Pensez bien à donner des permissions à initialisation et verif avant de commencer le jeu (chmod +x <fichier>) /!\***
